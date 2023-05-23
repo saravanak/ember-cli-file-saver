@@ -1,7 +1,7 @@
-import Ember from 'ember';
 import FileSaver from 'file-saver';
+import Mixin from '@ember/object/mixin';
 
-export default Ember.Mixin.create({
+export default Mixin.create({
 
   saveCanvasAs(filename, canvas) {
     canvas.toBlob((blob) => this.saveAs(blob, filename));
